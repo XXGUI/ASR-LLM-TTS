@@ -1,7 +1,7 @@
 # ASR-LLM-TTS Demo
 
 本项目是一个集成语音识别（ASR）、大语言模型（LLM）和语音合成（TTS）的语音对话 Demo，基于 [ABexit/ASR-LLM-TTS](https://github.com/ABexit/ASR-LLM-TTS) 进行修改和扩展，支持本地运行及 API 部署，适合集成到各种实时语音对话场景中。
-
+vits模型我用的是：https://hf-mirror.com/jackyqs/vits-aishell3-175-chinese/tree/main
 ---
 
 ## ✨ 功能简介
@@ -44,6 +44,3 @@
 
 ---
 
-## 🚀 快速开始
-
-### 1. 安装依赖
