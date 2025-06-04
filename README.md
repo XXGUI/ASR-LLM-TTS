@@ -1,10 +1,28 @@
-这是一个结合了语音识别+大模型+语音合成的demo，基于https://github.com/ABexit/ASR-LLM-TTS进行修改
-语音识别：SenseVoiceSmall
-语音合成：vits
-大模型：AutoModelForCausalLM或者外部api
+# ASR-LLM-TTS Demo
 
-文件说明：
-main.py：监听麦克风+qwen2.5+tts对话（回车控制录音开始结束）
-lingyin.py：实时监听麦克风对话
-main-dify.py：监听麦克风+dify api接口推理+tts对话（回车控制录音开始结束）
-main-dify-api.py：api对外形式的程序，提供了asr，tts对外接口，同时支持输入文本推理后返回音频结果，适合集成到实时对话业务。
+本项目是一个集成语音识别（ASR）、大语言模型（LLM）和语音合成（TTS）的语音对话 Demo，基于 [ABexit/ASR-LLM-TTS](https://github.com/ABexit/ASR-LLM-TTS) 进行修改和扩展，支持本地运行及 API 部署，适合集成到各种实时语音对话场景中。
+
+## ✨ 功能简介
+
+- **语音识别（ASR）：** 使用 `SenseVoiceSmall` 模型。
+- **大语言模型（LLM）：**
+  - 本地模型（如 `AutoModelForCausalLM`）或
+  - 外部 API（如 Qwen 2.5、Dify 等）。
+- **语音合成（TTS）：** 使用 `VITS` 实现中文语音合成。
+- **多模式支持：**
+  - 命令行对话
+  - 实时麦克风监听
+  - API 服务接口
+
+---
+
+## 📁 项目文件说明
+
+| 文件名               | 描述                                                                 |
+|--------------------|----------------------------------------------------------------------|
+| `main.py`          | 使用麦克风进行对话，结合本地 Qwen2.5 推理和 VITS 合成。按回车开始/结束录音。 |
+| `lingyin.py`       | 实时监听麦克风并进行连续语音对话。                                       |
+| `main-dify.py`     | 使用麦克风对话，通过 Dify API 推理，使用 VITS 合成语音。回车控制录音开始结束。 |
+| `main-dify-api.py` | 提供外部接口形式，支持 ASR、TTS 和输入文本的推理音频生成，适合集成到实时语音服务。 |
+
+---
